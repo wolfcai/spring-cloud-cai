@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: cai-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456@2021
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  main:
+    #springboot 2.6.0后默认禁止循环依赖
+    allow-circular-references: true
+dubbo:
+  scan:
+    # dubbo 服务扫描基准包
+    base-packages: com.cai.order.service
+  protocol:
+    # dubbo 协议
+    name: dubbo
+    # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+    port: -1
+  registry:
+    # 挂载到 Spring Cloud 注册中心
+    address: spring-cloud://localhost
