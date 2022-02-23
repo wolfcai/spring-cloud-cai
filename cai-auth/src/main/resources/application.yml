@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cai-user
+    name: cai-auth
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
@@ -13,6 +13,11 @@ spring:
   main:
     #springboot 2.6.0后默认禁止循环依赖
     allow-circular-references: true
+  security:
+    user:
+      name: 1
+      password: 1
+
 dubbo:
   scan:
     # dubbo 服务扫描基准包
@@ -25,3 +30,9 @@ dubbo:
   registry:
     # 挂载到 Spring Cloud 注册中心
     address: spring-cloud://localhost
+server:
+  port: 8081
+logging:
+  level:
+    org.springframework.security: DEBUG
+

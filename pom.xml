@@ -21,6 +21,7 @@
         <module>cai-gateway</module>
         <module>cai-order</module>
         <module>cai-dependencies</module>
+        <module>cai-boot-admin</module>
     </modules>
 
 

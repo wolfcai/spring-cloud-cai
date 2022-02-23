@@ -3,6 +3,6 @@ package com.cai.user.service;
 
 import com.cai.user.dto.UserDTO;
 
-public interface UserAPIService {
+public interface UserApiService {
     UserDTO getUser();
 }
